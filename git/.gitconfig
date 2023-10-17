@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Jose Leiva
+  email = email.joseleiva@gmail.com
+[core]
+  editor = nvim
+  autocrlf = input
+  pager = batcat
+[init]
+  defaultBranch = main
+[credential "https://github.com"]
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
