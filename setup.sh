@@ -43,5 +43,9 @@ volta install node # lts node & npm
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# tmux - setup plugin manager
+gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf # TODO: "tmux readme - Press prefix + I (capital i, as in Install) to fetch the plugin."
+
 # tmux - as default terminal
 chsh -s $(which tmux)
