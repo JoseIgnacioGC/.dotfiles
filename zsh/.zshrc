@@ -1,37 +1,50 @@
-# Set up the prompt
+# TODO: create a readme (where are the aliases, exports, etc.)
+CALCULATE_STARTUP_TIME=0
+(( CALCULATE_STARTUP_TIME )) && zmodload zsh/zprof
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+ZSH_THEME="refined"
 
-setopt histignorealldups sharehistory
+ENABLE_CORRECTION="true"
+# DISABLE_LS_COLORS="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+zstyle ':omz:update' mode reminder
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
+# TODO: "wsl config - too slow" solution:
+# https://github.com/zsh-users/zsh-syntax-highlighting/issues/790
+plugins=(
+    # zsh-autosuggestions
+    # zsh-completions
 
-# Use modern completion system
-autoload -Uz compinit
-compinit
+    git
+    rust
+    npm-run
+    gh
+    docker
 
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
+    # zsh-vi-mode # wsl config - too slow
+    # zsh-syntax-highlighting # wsl config - too slow
+)
 
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# command for zsh-completions
+autoload -U compinit && compinit
+
+# vi key bindings
+bindkey -v
+
+# dotfiles autocompletions
+setopt globdots
+
+# rust - cargo
+source $HOME/.cargo/env
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+(( CALCULATE_STARTUP_TIME )) && zprof

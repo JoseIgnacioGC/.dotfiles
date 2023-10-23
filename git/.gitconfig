@@ -5,6 +5,6 @@
 [core]
   editor = nvim
   autocrlf = input
-  pager = batcat
+  pager = bat
 [init]
   defaultBranch = main
