@@ -139,10 +139,10 @@ local plugins = {
 	},
 
 	-- git
-	-- TODO: make it lazy with mappings
+  -- TODO: make a mapping for this
+  -- open with :Lazy load diffview.nvim
 	{
 		"sindrets/diffview.nvim",
-		lazy = false,
 	},
 }
 
