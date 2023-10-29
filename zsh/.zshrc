@@ -10,6 +10,9 @@ DISABLE_LS_COLORS="true"
 
 zstyle ':omz:update' mode reminder
 
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
 # TODO: "wsl config - too slow" solution:
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/790
 plugins=(
@@ -21,6 +24,9 @@ plugins=(
     npm-run
     gh
     docker
+    docker-compose
+    docker-machine
+
 
     # zsh-vi-mode # wsl config - too slow
     # zsh-syntax-highlighting # wsl config - too slow

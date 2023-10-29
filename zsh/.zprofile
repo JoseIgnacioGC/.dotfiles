@@ -10,7 +10,8 @@ fi
 
 # exports - PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin # go
+export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # tmux plugin - session manager
 
 # exports - zsh
 export ZSH="$HOME/.oh-my-zsh"

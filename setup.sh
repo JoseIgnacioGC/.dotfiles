@@ -9,6 +9,8 @@ sudo apt update && sudo apt upgrade
 sudo apt -y install curl
 sudo apt -y install build-essential
 sudo apt -y install man-db manpages-dev
+sudo apt -y install fzf
+sudo apt -y install zoxide
 sudo apt -y install ripgrep
 sudo apt -y install unzip
 sudo apt -y install wget

@@ -7,8 +7,8 @@ local highlights = require("custom.highlights")
 -- TODO: wsl possible solution: auto theme change
 -- (Get-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme).AppsUseLightTheme
 M.ui = {
-	theme = "tokyonight",
-	theme_toggle = { "tokyonight", "tokyonight" },
+	theme = "one_light",
+	-- theme_toggle = { "tokyonight", "one_light" },
 	transparency = true,
 
 	hl_override = highlights.override,
