@@ -1,5 +1,6 @@
 # Create basic folders
-mkdir ~/Documents ~/Downloads ~/Trash 
+mkdir ~/Documents ~/Downloads ~/Trash ~/Workspace
+mkdir ~/Workspace/{projects,forks,lern}
 
 # ssh key - generate
 ssh-keygen -o -f ~/.ssh/id_rsa
