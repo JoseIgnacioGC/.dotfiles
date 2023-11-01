@@ -139,10 +139,12 @@ local plugins = {
 	},
 
 	-- git
-  -- TODO: make a mapping for this
-  -- open with :Lazy load diffview.nvim
 	{
 		"sindrets/diffview.nvim",
+		config = function()
+			vim.api.nvim_set_keymap("n", "<leader>gdo", ":DiffviewOpen <CR>", { desc = "diffview open" })
+			vim.api.nvim_set_keymap("n", "<leader>gdc", ":DiffviewClose <CR>", { desc = "diffview close" })
+		end,
 	},
 }
 
