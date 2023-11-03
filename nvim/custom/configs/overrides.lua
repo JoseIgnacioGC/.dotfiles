@@ -63,7 +63,7 @@ M.mason = {
 		"emmet-ls",
 		"eslint-lsp",
 		"html-lsp",
-    "tailwindcss-language-server",
+		"tailwindcss-language-server",
 		"typescript-language-server",
 		"prettier",
 
@@ -82,8 +82,8 @@ M.mason = {
 	},
 }
 
--- git support in nvimtree
 M.nvimtree = {
+	-- git support in nvimtree
 	git = {
 		enable = true,
 		ignore = false,
@@ -104,11 +104,6 @@ M.nvimtree = {
 }
 
 M.telescope = {
-	pickers = {
-		find_files = {
-			hidden = true,
-		},
-	},
 	defaults = {
 		vimgrep_arguments = {
 			"rg",
@@ -122,7 +117,6 @@ M.telescope = {
 			"--hidden",
 		},
 	},
-	-- file_ignore_patterns = { ".git" },
 }
 
 M.nvterm = {
