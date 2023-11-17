@@ -1,6 +1,6 @@
 # list
-alias ls="lsd"
-alias la="ls -a --group-directories-first"
+alias ls="lsd --group-directories-first"
+alias la="ls -a"
 alias l="la -lh"
 alias lf="la --directory-only (.*|*)(^-/)"
 alias lt="la --tree -I .git -I node_modules --depth"
@@ -16,6 +16,9 @@ alias nvimc="cd ~/.config/nvim && $EDITOR"
 alias zshc="$EDITOR ~/.zshrc"
 alias tmuxc="$EDITOR ~/.tmux.conf"
 alias gitc="git config --global -e"
-# other
+# custom pager
 alias batc="bat --paging=never"
+alias batd="bat --theme=\"Solarized (light)\""
+# other
 alias update="sudo apt update && sudo apt -y upgrade"
+alias open=xdg-open

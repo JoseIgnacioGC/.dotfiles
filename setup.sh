@@ -66,3 +66,5 @@ gh repo clone tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf # TODO: "tmux readme - Press prefix + I (capital i, as in Install) to fetch the plugin."
 # tmux - as default terminal
 chsh -s $(which tmux)
+
+# TODO: xdg_open_wsl install instruccions for wsl environment
