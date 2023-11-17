@@ -40,7 +40,7 @@ local plugins = {
 		opts = overrides.telescope,
 	},
 
-	-- TODO
+	-- TODO:
 	-- {
 	--   "nvim-treesitter/nvim-treesitter-context",
 	--   lazy = false
@@ -139,12 +139,28 @@ local plugins = {
 	},
 
 	-- git
+  -- TODO: check if tpope/vim-fugitive is better
 	{
 		"sindrets/diffview.nvim",
 		config = function()
 			vim.api.nvim_set_keymap("n", "<leader>gdo", ":DiffviewOpen <CR>", { desc = "diffview open" })
 			vim.api.nvim_set_keymap("n", "<leader>gdc", ":DiffviewClose <CR>", { desc = "diffview close" })
+			vim.api.nvim_set_keymap("n", "<leader>gdr", ":DiffviewRefresh <CR>", { desc = "diffview refresh" })
+			vim.api.nvim_set_keymap("n", "<leader>gdh", ":DiffviewFileHistory <CR>", { desc = "diffview file history" })
 		end,
+	},
+
+
+	-- todo comments
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		lazy = false,
+		opts = {
+			keywords = {
+				TODO = { color = "#BBEAFA" },
+			},
+		},
 	},
 }
 

@@ -14,7 +14,7 @@ local servers = {
 	"tailwindcss",
 	"tsserver",
 	"eslint",
-	"emmet_ls",
+	"emmet_language_server",
 
 	-- high level stuff
 	"pyright",

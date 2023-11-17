@@ -4,6 +4,8 @@ local M = {}
 M.general = {
 	n = {
 		[";"] = { ":", "enter command mode", opts = { nowait = true } },
+		["g<C-t>"] = { "<cmd> tab close <CR>", "Close current tab page" },
+		["g<M-t>"] = { "<cmd> tab new <CR>", "Create new tab page" },
 	},
 	v = {
 		[">"] = { ">gv", "indent" },
