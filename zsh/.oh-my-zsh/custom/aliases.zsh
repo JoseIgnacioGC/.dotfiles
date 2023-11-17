@@ -20,5 +20,6 @@ alias gitc="git config --global -e"
 alias batc="bat --paging=never"
 alias batd="bat --theme=\"Solarized (light)\""
 # other
+alias lazyvim="NVIM_APPNAME=lazyvim nvim"
 alias update="sudo apt update && sudo apt -y upgrade"
 alias open=xdg-open
