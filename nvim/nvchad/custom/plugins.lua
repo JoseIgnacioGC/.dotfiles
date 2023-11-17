@@ -115,18 +115,14 @@ local plugins = {
 	-- markdown
 	{
 		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
-	},
-	{
-		"iamcco/markdown-preview.nvim",
-		-- build = "cd app && npm install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
 		config = function()
+			local g = vim.g
+			g.mkdp_auto_close = 0
 			vim.api.nvim_set_keymap("n", "<leader>mp", ":MarkdownPreview <CR>", { desc = "markdown preview" })
 			vim.api.nvim_set_keymap("n", "<leader>ms", ":MarkdownPreviewStop <CR>", { desc = "markdown preview stop" })
 			vim.api.nvim_set_keymap(
