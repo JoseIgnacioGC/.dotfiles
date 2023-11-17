@@ -1,3 +1,6 @@
+# local env vars
+DOTFILES="$HOME/.dotfiles"
+
 # Create basic folders
 mkdir ~/Documents ~/Downloads ~/Trash ~/Workspace
 mkdir ~/Workspace/{projects,forks,lern}
@@ -44,7 +47,7 @@ cargo install tree-sitter-cli
 
 # gh - install
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \ && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \ && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \ && sudo apt update \ && sudo apt install gh -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \  && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \  && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list \  >/dev/null && sudo apt update \  && sudo apt install gh -y
 # gh - login
 gh auth login
 
@@ -68,3 +71,8 @@ tmux source ~/.tmux.conf # TODO: "tmux readme - Press prefix + I (capital i, as 
 chsh -s $(which tmux)
 
 # TODO: xdg_open_wsl install instruccions for wsl environment
+# TODO: all wsl setup on a separated file
+
+# run scripts
+sh ./remove.sh
+sh ./symlink.sh
