@@ -1,4 +1,3 @@
-# TODO: create a readme (where are the aliases, exports, etc.)
 CALCULATE_STARTUP_TIME=0
 (( CALCULATE_STARTUP_TIME )) && zmodload zsh/zprof
 
@@ -34,10 +33,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
 # command for zsh-completions
 autoload -U compinit && compinit
+
+# User configuration
 
 # vi key bindings
 bindkey -v
