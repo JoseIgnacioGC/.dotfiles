@@ -30,4 +30,5 @@ And create an aliase to open Neovim with your custom config.
 
 ```bash
     alias nvim_custom="NVIM_APPNAME=nvim_custom nvim"
+    nvim_custom somefile.txt
 ```
