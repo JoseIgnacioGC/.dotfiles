@@ -13,15 +13,6 @@ M.general = {
 }
 
 -- custom mappings
-M.diff_view = {
-	n = {
-		["<leader>gdl"] = {
-			"<cmd> Lazy load diffview.nvim <CR>",
-			"diffview load plugin",
-		},
-	},
-}
-
 local tmux_navigate_mappings = {
 	["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "window left" },
 	["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "window right" },
