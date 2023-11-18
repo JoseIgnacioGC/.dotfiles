@@ -34,9 +34,6 @@ sudo apt -y install python3-mercurial
 git submodule init
 git submodule update
 
-# pip - install packages
-pip install mercurial
-
 # rust - install
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # cargo - install packages
@@ -64,13 +61,17 @@ git clone https://github.com/NvChad/NvChad $HOME/.config/nvim --depth 1 && nvim
 
 # tmux - setup plugin manager
 gh repo clone tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-tmux source $HOME/.tmux.conf # TODO: "tmux readme - Press prefix + I (capital i, as in Install) to fetch the plugin."
+tmux source $HOME/.tmux.conf
 # tmux - as default terminal
 chsh -s $(which tmux)
 
 # TODO: xdg_open_wsl install instruccions for wsl environment
-# TODO: all wsl setup on a separated file
 
 # run scripts
 sh ./remove.sh
 sh ./symlink.sh
+
+# last setup scripts
+sudo apt update && sudo apt upgrade
+
+echo "Restart the terminal and type inside tmux (ctrl + b + I) to install tmux plugins"
