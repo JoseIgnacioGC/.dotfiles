@@ -22,13 +22,14 @@ sudo apt -y install tmux
 sudo apt -y install neovim
 # apt - symlink to prevent issues
 sudo apt -y install fd-find
-ln -vs $(which fdfind) $HOME/.local/bin/fd # only debian-based distros
+ln -vs $(which fdfind) $HOME/.local/bin/fd # NOTE: only debian-based distros
 sudo apt -y install bat
-ln -vs $(which batcat) $HOME/.local/bin/bat # only debian-based distros
+ln -vs $(which batcat) $HOME/.local/bin/bat # NOTE: only debian-based distros
 # apt - install pip packages
 sudo apt -y install python3.11-venv
 sudo apt -y install python3-pip
 sudo apt -y install python3-mercurial
+sudo apt -y install python3-click
 
 # git - setup submodules
 git submodule init
@@ -65,11 +66,10 @@ tmux source $HOME/.tmux.conf
 # tmux - as default terminal
 chsh -s $(which tmux)
 
-# TODO: xdg_open_wsl install instruccions for wsl environment
-
 # run scripts
 sh ./remove.sh
 sh ./symlink.sh
+sh ./wsl_only.sh # NOTE: only wsl 
 
 # last setup scripts
 sudo apt update && sudo apt upgrade
