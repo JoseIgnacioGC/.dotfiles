@@ -8,4 +8,19 @@ return {
       })
     end,
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      hide_root_node = true,
+      filesystem = {
+        filtered_items = {
+          visible = true,
+        },
+      },
+      window = {
+        position = "right",
+        width = 30,
+      },
+    },
+  },
 }

@@ -30,6 +30,7 @@ sudo apt -y install python3.11-venv
 sudo apt -y install python3-pip
 sudo apt -y install python3-mercurial
 sudo apt -y install python3-click
+sudo apt -y install python3-neovim
 
 # git - setup submodules
 git submodule init
@@ -69,7 +70,7 @@ chsh -s $(which tmux)
 # run scripts
 sh ./remove.sh
 sh ./symlink.sh
-sh ./wsl_only.sh # NOTE: only wsl 
+sh ./wsl_only.sh # NOTE: only wsl
 
 # last setup scripts
 sudo apt update && sudo apt upgrade
