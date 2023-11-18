@@ -40,12 +40,6 @@ local plugins = {
 		opts = overrides.telescope,
 	},
 
-	-- TODO:
-	-- {
-	--   "nvim-treesitter/nvim-treesitter-context",
-	--   lazy = false
-	-- },
-
 	{
 		"nvim-tree/nvim-tree.lua",
 		opts = overrides.nvimtree,
