@@ -1,19 +1,5 @@
 return {
 
-  -- TODO: hex_color
-  -- {
-  --   "echasnovski/mini.hipatterns",
-  --   opts = function()
-  --     local hi = require("mini.hipatterns")
-  --     local _none = "#fffff"
-  --     return {
-  --       highlighters = {
-  --         hex_color = hi.gen_highlighter.hex_color({ priority = 2000 }),
-  --       },
-  --     }
-  --   end,
-  -- },
-
   -- markdown
   {
     "iamcco/markdown-preview.nvim",

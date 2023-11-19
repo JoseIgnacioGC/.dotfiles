@@ -24,7 +24,7 @@ return {
     },
   },
 
-  -- color scheme
+  -- colorscheme
   {
     "folke/tokyonight.nvim",
     opts = {
@@ -52,9 +52,17 @@ return {
     end,
   },
 
-  -- TODO: customize statusline https://www.lazyvim.org/plugins/ui#lualinenvim
-  -- TODO: customize dashboard https://www.lazyvim.org/plugins/ui#dashboard-nvim
+  -- statusline
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_z = {},
+      },
+    },
+  },
 
+  -- file explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
