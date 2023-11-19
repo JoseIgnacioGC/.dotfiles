@@ -13,7 +13,7 @@ default distro:
 another:
 
 ```bash
-    lazyvim somefile.txt
+    nvchad somefile.txt
 ```
 
 ## Add another distribution

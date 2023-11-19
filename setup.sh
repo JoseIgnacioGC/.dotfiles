@@ -59,7 +59,7 @@ npm i -g neovim
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # nvim - setup NvChad
-git clone https://github.com/NvChad/NvChad $HOME/.config/nvim --depth 1 && nvim
+git clone https://github.com/NvChad/NvChad $HOME/.config/nvchad --depth 1
 
 # tmux - setup plugin manager
 gh repo clone tmux-plugins/tpm $HOME/.tmux/plugins/tpm
