@@ -30,7 +30,6 @@ sudo apt -y install python3.11-venv
 sudo apt -y install python3-pip
 sudo apt -y install python3-mercurial
 sudo apt -y install python3-click
-sudo apt -y install python3-neovim
 
 # git - setup submodules
 git submodule init
@@ -51,9 +50,6 @@ gh auth login
 # volta - install & setup
 curl https://get.volta.sh | sh
 volta install node # lts node & npm
-
-# npm - install packages
-npm i -g neovim
 
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

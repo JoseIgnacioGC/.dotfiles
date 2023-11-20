@@ -35,21 +35,6 @@ return {
       },
       style = "storm",
     },
-    config = function()
-      vim.g.current_scheme = "tokyonight-storm"
-
-      function ToggleColorScheme()
-        if vim.g.current_scheme == "tokyonight-storm" then
-          vim.g.current_scheme = "tokyonight-day"
-          vim.cmd([[colorscheme tokyonight-day]])
-        else
-          vim.g.current_scheme = "tokyonight-storm"
-          vim.cmd([[colorscheme tokyonight-storm]])
-        end
-      end
-
-      vim.keymap.set("n", "<leader>uq", "<cmd>lua ToggleColorScheme()<cr>", { desc = "toggle colorscheme" })
-    end,
   },
 
   -- statusline
