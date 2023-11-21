@@ -15,20 +15,5 @@ function ToggleColorScheme()
   end
 end
 
--- TODO: export this to autocmd.lua file
--- set color scheme at startup
-local COMMAND_IS_DARK =
-  "powershell.exe -noprofile -nologo -noninteractive '$a = Get-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize; $a.AppsUseLightTheme'"
-vim.fn.jobstart(COMMAND_IS_DARK, {
-  on_exit = function(_, is_dark, _)
-    print("is_dark: " .. is_dark)
-    if is_dark == 0 then
-      vim.o.background = "dark"
-    else
-      vim.o.background = "light"
-    end
-  end,
-})
-
 -- options
 vim.opt.wrap = true
