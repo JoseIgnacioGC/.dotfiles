@@ -11,18 +11,6 @@ return {
 
   -- rust
   {
-    "Saecki/crates.nvim",
-    lazy = true,
-    ft = { "rust", "toml" },
-  },
-
-  {
-    "simrat39/rust-tools.nvim",
-    lazy = true,
-    ft = { "rust", "toml" },
-  },
-
-  {
     "hrsh7th/nvim-cmp",
     opts = function(_, opts)
       local cmp = require("cmp")
