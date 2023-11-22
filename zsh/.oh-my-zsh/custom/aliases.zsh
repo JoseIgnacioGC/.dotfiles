@@ -10,7 +10,6 @@ alias mv="mv -iv"
 alias rm="rm -v"
 alias ln="ln -v"
 alias mkdir="mkdir -pv"
-alias shutdown="wsl.exe --shutdown" # wsl config
 # configs
 alias nvimc="cd ~/.config/nvim && $EDITOR"
 alias zshc="$EDITOR ~/.zshrc"
@@ -22,4 +21,3 @@ alias batd="bat --theme=\"Solarized (light)\""
 # other
 alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias update="sudo apt update && sudo apt -y upgrade"
-alias open=xdg-open

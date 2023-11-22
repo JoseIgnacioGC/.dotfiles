@@ -47,7 +47,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 # gh - login
 gh auth login
 
-# volta - install & setup
+# volta (nodejs version manager) - install & setup
 curl https://get.volta.sh | sh
 volta install node # lts node & npm
 
