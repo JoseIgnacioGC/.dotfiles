@@ -11,17 +11,25 @@ return {
     },
   },
 
-  -- disable indent guide animation
-  -- PERF: slow response
+  -- indent guides
   {
-    "echasnovski/mini.indentscope",
+    "lukas-reineke/indent-blankline.nvim",
     opts = {
-      draw = {
-        animation = function()
-          return 0
-        end,
+      scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+        highlight = { "Function", "Label" },
       },
     },
+    config = function()
+      require("ibl").setup()
+    end,
+  },
+
+  {
+    "echasnovski/mini.indentscope",
+    enabled = false,
   },
 
   -- colorscheme
@@ -35,6 +43,12 @@ return {
       },
       style = "storm",
     },
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    enabled = false,
   },
 
   -- statusline
@@ -75,6 +89,16 @@ return {
       end,
     },
   },
+
+  -- TODO: funny dashboard
+  -- {
+  --    "nvimdev/dashboard-nvim",
+  --    opts = {
+  --        config = {
+  --            header = vim.split(logo, "\n")
+  --        }
+  --    }
+  -- }
 
   -- ensure installed
   {
