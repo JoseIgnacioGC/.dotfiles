@@ -21,6 +21,10 @@ is to have [Git](https://git-scm.com/) installed and configured.
 
 ## Setting up the Linux
 
+> [!WARNING]
+>
+> The setup file has not yet been tested.
+
 Follow these steps to set up the dotfiles on your system:
 
 1. Install git:
@@ -53,7 +57,7 @@ Follow these steps to set up the dotfiles on your system:
    sh setup.sh
    ```
 
-   > [!Warning]
+   > [!WARNING]
    >
    > It is recommended to check this script, because the script will create
    > folders, install packages, configure the packages, symlink the files
