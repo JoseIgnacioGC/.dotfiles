@@ -57,11 +57,9 @@ Follow these steps to set up the dotfiles on your system:
    sh setup.sh
    ```
 
-   > [!WARNING]
-   >
-   > It is recommended to check this script, because the script will create
-   > folders, install packages, configure the packages, symlink the files
-   > and folders to your machine, and make sure your configurations are applied.
+   It is recommended to check this script, because the script will create
+   folders, install packages, configure the packages, symlink the files
+   and folders to your machine, and make sure your configurations are applied.
 
 ## Your Customization
 
