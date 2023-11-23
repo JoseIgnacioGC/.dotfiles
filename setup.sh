@@ -15,7 +15,6 @@ sudo apt -y install curl wget
 sudo apt -y install build-essential unzip
 sudo apt -y install man-db manpages-dev
 sudo apt -y install fzf ripgrep fd-find
-sudo apt -y install git-all
 sudo apt -y install zoxide
 sudo apt -y install zsh
 sudo apt -y install tmux
@@ -66,7 +65,11 @@ chsh -s $(which tmux)
 # run scripts
 sh ./remove.sh
 sh ./symlink.sh
-sh ./wsl_only.sh # NOTE: only wsl
+
+if [ -e ./wsl_only.sh ]; then
+	# TODO: Setup all WSL stuff here, maybe in another language.
+	sh ./wsl_only.sh # NOTE: only wsl
+fi
 
 # last setup scripts
 sudo apt update && sudo apt upgrade

@@ -1,11 +1,9 @@
 return {
-
   -- markdown
   {
     "iamcco/markdown-preview.nvim",
     config = function()
-      local g = vim.g
-      g.mkdp_auto_close = 0
+      vim.g.mkdp_auto_close = 0
     end,
   },
 
