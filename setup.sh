@@ -15,7 +15,6 @@ sudo apt -y install curl wget
 sudo apt -y install build-essential unzip
 sudo apt -y install man-db manpages-dev
 sudo apt -y install fzf ripgrep fd-find
-sudo apt -y install zoxide
 sudo apt -y install zsh
 sudo apt -y install tmux
 sudo apt -y install neovim
