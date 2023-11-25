@@ -18,7 +18,7 @@ return {
       },
       {
         "<leader>gdh",
-        "<cmd>diffviewfilehistory<cr>",
+        "<cmd>Diffviewfilehistory<cr>",
         desc = "Diffviewfilehistory",
       },
       {
