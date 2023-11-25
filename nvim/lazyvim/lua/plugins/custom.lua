@@ -18,8 +18,8 @@ return {
       },
       {
         "<leader>gdh",
-        "<cmd>Diffviewfilehistory<cr>",
-        desc = "Diffviewfilehistory",
+        "<cmd>DiffviewFileHistory<cr>",
+        desc = "DiffviewFileHistory",
       },
       {
         "<leader>gdr",
