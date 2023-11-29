@@ -18,6 +18,28 @@ return {
     end,
   },
 
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        rust_analyzer = {
+          settings = {
+            ["rust-analyzer"] = {
+              lens = {
+                run = {
+                  enable = false,
+                },
+                debug = {
+                  enable = false,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
   -- c & c++
   {
     "p00f/clangd_extensions.nvim",
