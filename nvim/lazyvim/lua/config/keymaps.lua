@@ -3,4 +3,5 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
-map("n", "<leader>uq", "<cmd>lua ToggleColorScheme()<cr>", { desc = "toggle colorscheme" })
+map("n", "<leader>uS", "<cmd>lua ToggleColorScheme()<cr>", { desc = "toggle color scheme" })
+map("n", "<leader>uD", "<cmd>Gitsigns toggle_deleted<cr>", { desc = "toggle deleted lines (git)" })
