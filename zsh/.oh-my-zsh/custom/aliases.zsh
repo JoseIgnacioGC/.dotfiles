@@ -11,9 +11,10 @@ alias rm="rm -v"
 alias ln="ln -v"
 alias mkdir="mkdir -pv"
 # configs
-alias nvimc="cd ~/.config/nvim && $EDITOR"
-alias zshc="$EDITOR ~/.zshrc"
-alias tmuxc="$EDITOR ~/.tmux.conf"
+alias dotc="cd $DOTFILES && $EDITOR"
+alias nvimc="cd $DOTFILES && $EDITOR ~/.config/nvim"
+alias zshc="cd $DOTFILES && $EDITOR ~/.zshrc"
+alias tmuxc="cd $DOTFILES && $EDITOR $DOTFILES/tmux/.tmux.conf"
 alias gitc="git config --global -e"
 # custom pager
 alias batc="bat --paging=never"
