@@ -3,7 +3,7 @@ DOTFILES="$HOME/.dotfiles"
 
 # create folders
 mkdir $HOME/{Documents,Downloads,Trash}
-mkdir -p $HOME/Workspace/{projects,forks,lern}
+mkdir -p $HOME/Workspace/{projects,forks,lern,scripts}
 mkdir -p $HOME/bin $HOME/.local/bin
 
 # ssh key - generate
