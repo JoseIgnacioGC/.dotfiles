@@ -70,6 +70,8 @@ your unique workflow.
 
 ### Aliases & Env
 
+<!-- TODO: add a tree to show where are the files -->
+
 To define your own aliases go to the `aliases.zsh` file and for the Env
 variables in the `.zprofile` file, for more information read the `README`
 file in the zsh folder.

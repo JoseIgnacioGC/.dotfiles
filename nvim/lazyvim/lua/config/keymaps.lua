@@ -4,4 +4,4 @@
 local map = vim.keymap.set
 
 map("n", "<leader>uS", "<cmd>lua ToggleColorScheme()<cr>", { desc = "toggle color scheme" })
-map("n", "<leader>uD", "<cmd>Gitsigns toggle_deleted<cr>", { desc = "toggle deleted lines (git)" })
+map("n", "<leader>gD", "<cmd>Gitsigns toggle_deleted<cr>", { desc = "toggle deleted lines" })
