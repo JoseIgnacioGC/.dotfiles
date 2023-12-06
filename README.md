@@ -68,13 +68,20 @@ tweaking the shell prompt, adding new aliases, or adjusting color schemes,
 make it your own. The power of dotfiles lies in their ability to reflect
 your unique workflow.
 
-### Aliases & Env
+### Add Aliases & Env variables
 
-<!-- TODO: add a tree to show where are the files -->
+For performance reasons, aliases and Env variables are defined in different
+files; to add new ones and/or change existing ones, go to the following files:
 
-To define your own aliases go to the `aliases.zsh` file and for the Env
-variables in the `.zprofile` file, for more information read the `README`
-file in the zsh folder.
+```bash
+.
+└──📁 zsh
+    ├──📁 .oh-my-zsh
+    │   └──📁 custom
+    │       └── aliases.zsh # Aliases should be defined here
+    └─ .zprofile # ENV variables should be defined here
+
+```
 
 ## Contributions
 
