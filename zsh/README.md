@@ -17,7 +17,9 @@
 
 ## oh-my-zsh
 
-> [!NOTE] Please read the oh-my-zsh documentation before making any changes
+> [!NOTE]
+>
+> Please read the oh-my-zsh documentation before making any changes
 
 The zsh shell plugins are managed by oh-my-zsh
 
