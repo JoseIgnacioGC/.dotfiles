@@ -129,7 +129,6 @@ local plugins = {
 	},
 
 	-- git
-	-- TODO: check if tpope/vim-fugitive is better
 	{
 		"sindrets/diffview.nvim",
 		lazy = false,

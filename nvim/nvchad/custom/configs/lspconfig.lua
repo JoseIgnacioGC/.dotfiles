@@ -33,7 +33,6 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
--- TODO: resolve rust-tools conflicts
 lspconfig.rust_analyzer.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
