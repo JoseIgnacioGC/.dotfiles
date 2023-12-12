@@ -12,6 +12,11 @@ Set true colors in tmux config file
 ```
 
 ## Plugins
+
 The zsh shell plugins are managed by tmp.
 
 See the documentation [here](https://github.com/tmux-plugins/tpm).
+
+## Binds
+
+The tmux key-bindings are defined in the `.tmux.binds.conf` file.
