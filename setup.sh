@@ -52,6 +52,7 @@ volta install node # lts node & npm
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# TODO: add lazyvim intall & setup in setup.sh
 # nvim - setup NvChad
 git clone https://github.com/NvChad/NvChad $HOME/.config/nvchad --depth 1
 

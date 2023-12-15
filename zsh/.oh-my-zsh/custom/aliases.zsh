@@ -21,4 +21,4 @@ alias batc="bat --paging=never"
 alias batd="bat --theme=\"Solarized (light)\""
 # other
 alias nvchad="NVIM_APPNAME=nvchad nvim"
-alias update="sudo apt update && sudo apt -y upgrade"
+alias update="sudo apt update || sudo apt -y upgrade"
