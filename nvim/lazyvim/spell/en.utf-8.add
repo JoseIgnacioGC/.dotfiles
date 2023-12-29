@@ -4,3 +4,5 @@ dir
 zsh
 Env
 Async
+nvim
+lsp
