@@ -25,6 +25,7 @@ plugins=(
     docker
     docker-compose
     docker-machine
+    volta
 
 
     # zsh-vi-mode # wsl config - too slow
