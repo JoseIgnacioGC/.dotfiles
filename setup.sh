@@ -20,8 +20,8 @@ sudo apt -y install tmux
 sudo apt -y install neovim
 # apt - symlink to prevent issues
 sudo apt -y install fd-find
-ln -vs $(which fdfind) $HOME/.local/bin/fd # NOTE: only debian-based distros
-sudo apt -y install bat
+ln -vs $(which fdfind) $HOME/.local/bin/fd  # NOTE: only debian-based distros
+sudo apt -y install bat                     # TODO: define the bat theme according to the os theme & remove deprecated aliases
 ln -vs $(which batcat) $HOME/.local/bin/bat # NOTE: only debian-based distros
 # apt - install pip packages
 sudo apt -y install python3.11-venv

@@ -18,7 +18,7 @@ alias tmuxc="cd $DOTFILES && $EDITOR $DOTFILES/tmux/.tmux.conf"
 alias gitc="git config --global -e"
 # custom pager
 alias batc="bat --paging=never"
-alias batd="bat --theme=\"Solarized (light)\""
+alias batd="bat --theme=\"GitHub\""
 # other
 alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias update="echo \"apt update:\n\" ; sudo apt -y update ; echo \"\napt upgrade:\n\" ; sudo apt -y upgrade"
