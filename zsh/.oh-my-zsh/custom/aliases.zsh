@@ -20,5 +20,4 @@ alias gitc="git config --global -e"
 alias batc="bat --paging=never"
 alias batd="bat --theme=\"GitHub\""
 # other
-alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias update="echo \"apt update:\n\" ; sudo apt -y update ; echo \"\napt upgrade:\n\" ; sudo apt -y upgrade"
