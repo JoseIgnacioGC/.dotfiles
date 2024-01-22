@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # local env vars
 DOTFILES="$HOME/.dotfiles"
 
