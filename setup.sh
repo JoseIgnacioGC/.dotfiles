@@ -63,12 +63,12 @@ tmux source $HOME/.tmux.conf
 chsh -s $(which tmux)
 
 # run scripts
-sh ./remove.sh
-sh ./symlink.sh
+sh ./shell/remove.sh
+sh ./shell/symlink.sh
 
-if [ -e ./wsl_only.sh ]; then
+if [ -e ./shell/wsl_only.sh ]; then
 	# TODO: Setup all WSL stuff here, maybe in another language.
-	sh ./wsl_only.sh # NOTE: only wsl
+	sh ./shell/wsl_only.sh # NOTE: only wsl
 fi
 
 # last setup scripts

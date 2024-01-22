@@ -48,7 +48,7 @@ Follow these steps to set up the dotfiles on your system:
 1. Remove the `wsl_only.sh` file if you're not in a WSL environment:
 
    ```bash
-   rm wsl_only.sh
+   rm shell/wsl_only.sh
    ```
 
 1. Run the setup script:
