@@ -3,5 +3,4 @@ ln -fsv $DOTFILES/zsh/{.zshrc,.zprofile,.zsh_logout} $HOME/
 ln -fsv $DOTFILES/tmux/.tmux.conf $HOME/
 
 # nvim distros
-ln -fsv $DOTFILES/nvim/nvchad/custom $HOME/.config/nvchad/lua/
 ln -fsv $DOTFILES/nvim/lazyvim $HOME/.config/nvim
