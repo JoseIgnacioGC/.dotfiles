@@ -16,7 +16,7 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/790
 plugins=(
     # zsh-autosuggestions
-    # zsh-completions
+    zsh-completions
 
     git
     rust
@@ -26,7 +26,7 @@ plugins=(
     docker-compose
     docker-machine
     volta
-
+    web-search
 
     # zsh-vi-mode # wsl config - too slow
     # zsh-syntax-highlighting # wsl config - too slow
