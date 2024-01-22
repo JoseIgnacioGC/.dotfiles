@@ -20,4 +20,4 @@ alias gitc="git config --global -e"
 alias batc="bat --paging=never"
 alias batd="bat --theme=\"GitHub\""
 # other
-alias update="echo \"apt update:\n\" ; sudo apt -y update ; echo \"\napt upgrade:\n\" ; sudo apt -y upgrade"
+alias update="sudo apt -y update ; echo \"\napt update finished.\n\" ; sudo apt -y upgrade; echo \"\napt upgrade finished.\""
