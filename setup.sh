@@ -62,14 +62,17 @@ tmux source $HOME/.tmux.conf
 # tmux - as default terminal
 chsh -s $(which tmux)
 
-# run scripts
-sh ./shell/remove.sh
-sh ./shell/symlink.sh
+# run all `shell/` scripts
+for script in shell/*.sh; do
+	[ -e "$script" ] || continue # Skip non-existent files
+	if [ $(basename "$script") = "wsl_only.sh" ]; then
+		# TODO: Setup all WSL stuff here, maybe in another language.
+		sh ./shell/wsl_only.sh # NOTE: only wsl
+		continue
+	fi
 
-if [ -e ./shell/wsl_only.sh ]; then
-	# TODO: Setup all WSL stuff here, maybe in another language.
-	sh ./shell/wsl_only.sh # NOTE: only wsl
-fi
+	sh "$script"
+done
 
 # last setup scripts
 sudo apt update && sudo apt upgrade
