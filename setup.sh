@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # local env vars
 DOTFILES="$HOME/.dotfiles"
 
