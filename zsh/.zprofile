@@ -7,7 +7,6 @@ export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # tmux pl
 
 # exports - paths
 export DOTFILES="$HOME/.dotfiles"
-export BROWSER="/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe" # NOTE: only wsl
 
 # exports - zsh
 export ZSH="$HOME/.oh-my-zsh"
