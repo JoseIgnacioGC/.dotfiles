@@ -72,10 +72,6 @@ volta install node # lts node & npm
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# TODO: add lazyvim install & setup in setup.sh
-# nvim - setup NvChad
-git clone https://github.com/NvChad/NvChad $HOME/.config/nvchad --depth 1
-
 # Tmux - setup plugin manager
 gh repo clone tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 tmux source $HOME/.tmux.conf
