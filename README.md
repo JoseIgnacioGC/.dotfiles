@@ -19,7 +19,7 @@ The dotfiles in this repository are carefully curated to enhance the Linux user:
 This configuration is designed so that the only thing required for execution
 is to have [Git](https://git-scm.com/) installed and configured.
 
-## Setting up the Linux
+## Setting up
 
 > [!WARNING]
 >
