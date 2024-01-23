@@ -16,10 +16,13 @@ is_yes() {
 }
 
 # pre installation options
-echo "\nBefore the setup. Do you want to ..."
+echo $'\nBefore the setup. Do you want to...\n'
 
-read -p "setup in a wsl environment? (Y/n): " yn
+read -p $'- setup in a wsl environment? (Y/n): ' yn
 IS_WSL_ENV=$(is_yes "$yn")
+
+read -p $'- start the setup?            (Y/n): ' yn
+[ $(is_yes "$yn") == 0 ] || exit
 
 # create folders
 mkdir $HOME/{Documents,Downloads,Trash}
