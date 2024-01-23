@@ -1,6 +1,25 @@
 #!/bin/bash
+
 # local env vars
 DOTFILES="$HOME/.dotfiles"
+IS_WSL_ENV=0
+
+# functions
+is_yes() {
+	local yn=0
+
+	if [[ "$1" != [yY]* ]]; then
+		yn=1
+	fi
+
+	echo "$yn"
+}
+
+# pre installation options
+echo "\nBefore the setup. Do you want to ..."
+
+read -p "setup in a wsl environment? (Y/n): " yn
+IS_WSL_ENV=$(is_yes "$yn")
 
 # create folders
 mkdir $HOME/{Documents,Downloads,Trash}
@@ -65,12 +84,8 @@ chsh -s $(which tmux)
 
 # run all `shell/` scripts
 for script in shell/*.sh; do
-	[ -e "$script" ] || continue # Skip non-existent files
-	if [ $(basename "$script") = "wsl_only.sh" ]; then
-		# TODO: Setup all WSL stuff here, maybe in another language.
-		sh ./shell/wsl_only.sh # NOTE: only wsl
-		continue
-	fi
+	[ -e "$script" ] || continue # skip non-existent files
+	[ $IS_WSL_ENV == 0 ] || continue
 
 	sh "$script"
 done
