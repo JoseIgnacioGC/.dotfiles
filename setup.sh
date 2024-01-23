@@ -40,16 +40,16 @@ sudo apt -y install tmux
 sudo apt -y install neovim
 # apt - symlink to prevent issues
 sudo apt -y install fd-find
-ln -vs $(which fdfind) $HOME/.local/bin/fd  # NOTE: only debian-based distros
+ln -vs $(which fdfind) $HOME/.local/bin/fd  # NOTE: only Debian-based distros
 sudo apt -y install bat                     # TODO: define the bat theme according to the os theme & remove deprecated aliases
-ln -vs $(which batcat) $HOME/.local/bin/bat # NOTE: only debian-based distros
+ln -vs $(which batcat) $HOME/.local/bin/bat # NOTE: only Debian-based distros
 # apt - install pip packages
 sudo apt -y install python3.11-venv
 sudo apt -y install python3-pip
 sudo apt -y install python3-mercurial
 sudo apt -y install python3-click
 
-# git - setup submodules
+# git - setup sub-modules
 git submodule init
 git submodule update
 
@@ -72,14 +72,14 @@ volta install node # lts node & npm
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# TODO: add lazyvim intall & setup in setup.sh
+# TODO: add lazyvim install & setup in setup.sh
 # nvim - setup NvChad
 git clone https://github.com/NvChad/NvChad $HOME/.config/nvchad --depth 1
 
-# tmux - setup plugin manager
+# Tmux - setup plugin manager
 gh repo clone tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 tmux source $HOME/.tmux.conf
-# tmux - as default terminal
+# Tmux - as default terminal
 chsh -s $(which tmux)
 
 # run all `shell/` scripts
