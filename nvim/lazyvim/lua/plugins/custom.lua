@@ -33,7 +33,6 @@ return {
   },
 
   -- tmux
-  -- TODO: repalce by https://github.com/alexghergh/nvim-tmux-navigation
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
