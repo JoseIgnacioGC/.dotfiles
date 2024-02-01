@@ -53,6 +53,8 @@ sudo apt -y install python3-pip
 sudo apt -y install python3-mercurial
 sudo apt -y install python3-click
 
+sudo apt update && sudo apt upgrade
+
 # git - setup sub-modules
 git submodule init
 git submodule update
@@ -62,6 +64,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # cargo - install packages
 cargo install lsd
 cargo install tree-sitter-cli
+
+sudo apt update && sudo apt upgrade
 
 # gh - install
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
