@@ -51,6 +51,16 @@ return {
             },
           },
         },
+        clangd = {
+          init_options = {
+            fallbackFlags = {
+              -- "-Weverything", -- also includes experimental warnings
+              -- "-Werror", -- promotes all warnings to errors
+              "-Wall",
+              "-Wextra",
+            },
+          },
+        },
       },
     },
   },
