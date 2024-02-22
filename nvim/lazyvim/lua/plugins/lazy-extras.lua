@@ -1,4 +1,36 @@
 return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        rust_analyzer = {
+          settings = {
+            ["rust-analyzer"] = {
+              lens = {
+                run = {
+                  enable = false,
+                },
+                debug = {
+                  enable = false,
+                },
+              },
+            },
+          },
+        },
+        clangd = {
+          init_options = {
+            fallbackFlags = {
+              -- "-Weverything", -- also includes experimental warnings
+              -- "-Werror", -- promotes all warnings to errors
+              "-Wall",
+              "-Wextra",
+            },
+          },
+        },
+      },
+    },
+  },
+
   -- markdown
   {
     "iamcco/markdown-preview.nvim",
@@ -31,38 +63,6 @@ return {
         { name = "crates" },
       }))
     end,
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        rust_analyzer = {
-          settings = {
-            ["rust-analyzer"] = {
-              lens = {
-                run = {
-                  enable = false,
-                },
-                debug = {
-                  enable = false,
-                },
-              },
-            },
-          },
-        },
-        clangd = {
-          init_options = {
-            fallbackFlags = {
-              -- "-Weverything", -- also includes experimental warnings
-              -- "-Werror", -- promotes all warnings to errors
-              "-Wall",
-              "-Wextra",
-            },
-          },
-        },
-      },
-    },
   },
 
   -- c & c++
