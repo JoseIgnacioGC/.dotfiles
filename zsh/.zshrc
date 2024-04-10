@@ -49,3 +49,10 @@ setopt globdots
 source $HOME/.cargo/env
 
 (( CALCULATE_STARTUP_TIME )) && zprof
+
+# bun completions
+[ -s "/home/ignacio/.bun/_bun" ] && source "/home/ignacio/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

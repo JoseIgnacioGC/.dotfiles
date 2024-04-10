@@ -77,10 +77,14 @@ gh auth login
 curl https://get.volta.sh | sh
 volta install node # lts node & npm
 
+# bun - install & setup
+curl -fsSL https://bun.sh/install | bash
+
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Tmux - setup plugin manager
+# TODO: replace `gh repo clone` by `git clone`
 gh repo clone tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 tmux source $HOME/.tmux.conf
 # Tmux - as default terminal
@@ -89,7 +93,9 @@ chsh -s $(which tmux)
 # run all `shell/` scripts
 for script in shell/*.sh; do
 	[ -e "$script" ] || continue # skip non-existent files
-	[ $IS_WSL_ENV == 0 ] || continue
+
+	# TODO: and if the file is named `wsl_only.sh`
+	# [ $IS_WSL_ENV == 0 ] || continue
 
 	sh "$script"
 done
