@@ -11,10 +11,11 @@ export DOTFILES="$HOME/.dotfiles"
 # exports - zsh
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$DOTFILES/zsh/.oh-my-zsh/custom"
-
-# exports - others
-export EDITOR="nvim"
+export PYTHON_AUTO_VRUN=true
 
 # exports - volta package manager
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# exports - others
+export EDITOR="nvim"

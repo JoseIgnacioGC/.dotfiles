@@ -20,6 +20,8 @@ plugins=(
 
     git
     rust
+    python
+    pip
     npm-run
     gh
     docker
