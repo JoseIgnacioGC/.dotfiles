@@ -7,6 +7,7 @@ export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # tmux pl
 
 # exports - paths
 export DOTFILES="$HOME/.dotfiles"
+export WIN_HOME="/mnt/c/Users/tkdgi"
 
 # exports - zsh
 export ZSH="$HOME/.oh-my-zsh"
