@@ -2,6 +2,10 @@
 
 Here are configs of different Neovim distributions.
 
+## Requirements
+
+- Neovim 0.10.0 or higher
+
 ## Usage
 
 default distro:

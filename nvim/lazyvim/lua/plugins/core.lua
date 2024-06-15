@@ -14,6 +14,10 @@ return {
   -- indent guides
   {
     "lukas-reineke/indent-blankline.nvim",
+    enabled = false,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
     opts = {
       scope = {
         enabled = true,

@@ -1,3 +1,7 @@
+if true then
+  return {}
+end
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -50,6 +54,18 @@ return {
       org = {
         fat_headline_upper_string = "▃",
         fat_headline_lower_string = "▀",
+      },
+    },
+  },
+
+  -- js/ts
+  {
+    "typescript-language-server/typescript-language-server",
+    opts = {
+      ["js/ts"] = {
+        implicitProjectConfig = {
+          checkJs = true,
+        },
       },
     },
   },

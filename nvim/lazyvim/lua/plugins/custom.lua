@@ -45,16 +45,4 @@ return {
       }
     end,
   },
-
-  -- js/ts
-  {
-    "typescript-language-server/typescript-language-server",
-    opts = {
-      ["js/ts"] = {
-        implicitProjectConfig = {
-          checkJs = true,
-        },
-      },
-    },
-  },
 }
