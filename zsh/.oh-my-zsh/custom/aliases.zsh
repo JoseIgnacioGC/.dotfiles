@@ -16,24 +16,25 @@ alias zshc="cd $DOTFILES && $EDITOR ~/.zshrc"
 alias tmuxc="cd $DOTFILES && $EDITOR $DOTFILES/tmux/.tmux.conf"
 alias gitc="git config --global -e"
 # other
-was_updated() {
+function __was_updated() {
   # $1: [package], $2: update | upgrade | [other]
-  echo -e "\n$1 \033[32m$2 finished\033[0m\n"
+  printf "\n$1 \033[32m$2 finished\033[0m\n\n"
 }
 
-alias update="sudo apt -y update ;
-was_updated apt update
-sudo apt -y upgrade ;
-was_updated apt upgrade ;
-echo -e "\n remember to use update-all occasionally\n"
-"
+function update() {
+  sudo apt -y update
+  __was_updated apt update
+  sudo apt -y upgrade
+  __was_updated apt upgrade
+  printf "\nremember to use update-all occasionally!\n\n"
+}
 
-alias update-all="update ;
-rustup update ;
-was_updated rustup update ;
-volta install node@latest npm@latest ;
-was_updated 'node & volta' update ;
-bun upgrade ;
-was_updated bun upgrade ;
-"
-
+function update-all() {
+  update
+  rustup update
+  __was_updated "rustup update"
+  volta install node@latest npm@latest
+  __was_updated "node & volta update"
+  bun upgrade
+  __was_updated "bun upgrade"
+}
