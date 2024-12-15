@@ -33,39 +33,22 @@ mkdir -p $HOME/bin $HOME/.local/bin
 ssh-keygen -o -f $HOME/.ssh/id_rsa
 
 # apt - install packages
-sudo apt update && sudo apt upgrade
+sudo apt update ; sudo apt upgrade
 sudo apt -y install curl wget
 sudo apt -y install build-essential unzip
 sudo apt -y install man-db manpages-dev
 sudo apt -y install fzf ripgrep fd-find
-sudo apt -y install clang llvm
 sudo apt -y install zsh
 sudo apt -y install tmux
-sudo apt -y install neovim
 # apt - symlink to prevent issues
 sudo apt -y install fd-find
 ln -vs $(which fdfind) $HOME/.local/bin/fd  # NOTE: only Debian-based distros
-sudo apt -y install bat                     # TODO: define the bat theme according to the os theme & remove deprecated aliases
-ln -vs $(which batcat) $HOME/.local/bin/bat # NOTE: only Debian-based distros
-# apt - install pip packages
-sudo apt -y install python3.11-venv
-sudo apt -y install python3-pip
-sudo apt -y install python3-mercurial
-sudo apt -y install python3-click
 
-sudo apt update && sudo apt upgrade
+sudo apt update ; sudo apt upgrade
 
 # git - setup sub-modules
 git submodule init
 git submodule update
-
-# rust - install
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# cargo - install packages
-cargo install lsd
-cargo install tree-sitter-cli
-
-sudo apt update && sudo apt upgrade
 
 # gh - install
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -77,15 +60,11 @@ gh auth login
 curl https://get.volta.sh | sh
 volta install node # lts node & npm
 
-# bun - install & setup
-curl -fsSL https://bun.sh/install | bash
-
 # oh-my-zsh - install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Tmux - setup plugin manager
-# TODO: replace `gh repo clone` by `git clone`
-gh repo clone tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 tmux source $HOME/.tmux.conf
 # Tmux - as default terminal
 chsh -s $(which tmux)
@@ -101,6 +80,6 @@ for script in shell/*.sh; do
 done
 
 # last setup scripts
-sudo apt update && sudo apt upgrade
+sudo apt update ; sudo apt upgrade
 
-echo "Restart the terminal and type inside tmux (ctrl + b + I) to install tmux plugins"
+echo "\nRestart the terminal and type inside tmux (ctrl + b + I) to install tmux plugins"

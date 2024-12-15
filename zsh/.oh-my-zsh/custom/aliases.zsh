@@ -12,12 +12,28 @@ alias ln="ln -v"
 alias mkdir="mkdir -pv"
 # configs
 alias dotc="cd $DOTFILES && $EDITOR"
-alias nvimc="cd $DOTFILES && $EDITOR ~/.config/nvim"
 alias zshc="cd $DOTFILES && $EDITOR ~/.zshrc"
 alias tmuxc="cd $DOTFILES && $EDITOR $DOTFILES/tmux/.tmux.conf"
 alias gitc="git config --global -e"
-# custom pager
-alias batc="bat --paging=never"
-alias batd="bat --theme=\"GitHub\""
 # other
-alias update="sudo apt -y update ; echo \"\napt update finished.\n\" ; sudo apt -y upgrade; echo \"\napt upgrade finished.\""
+was_updated() {
+  # $1: [package], $2: update | upgrade | [other]
+  echo -e "\n$1 \033[32m$2 finished\033[0m\n"
+}
+
+alias update="sudo apt -y update ;
+was_updated apt update
+sudo apt -y upgrade ;
+was_updated apt upgrade ;
+echo -e "\n remember to use update-all occasionally\n"
+"
+
+alias update-all="update ;
+rustup update ;
+was_updated rustup update ;
+volta install node@latest npm@latest ;
+was_updated 'node & volta' update ;
+bun upgrade ;
+was_updated bun upgrade ;
+"
+

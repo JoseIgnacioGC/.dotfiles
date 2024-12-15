@@ -26,7 +26,6 @@ plugins=(
     gh
     docker
     docker-compose
-    docker-machine
     volta
     web-search
 

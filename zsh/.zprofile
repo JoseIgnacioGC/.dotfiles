@@ -13,10 +13,11 @@ export WIN_HOME="/mnt/c/Users/tkdgi"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$DOTFILES/zsh/.oh-my-zsh/custom"
 export PYTHON_AUTO_VRUN=true
+export COLORTERM=truecolor
 
 # exports - volta package manager
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # exports - others
-export EDITOR="nvim"
+export EDITOR="hx"

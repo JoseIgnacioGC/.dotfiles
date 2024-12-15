@@ -12,7 +12,7 @@ The dotfiles in this repository are carefully curated to enhance the Linux user:
   handpicked plugins and autocompletions.
 - **Tmux Configuration**: Productive terminal multiplexing with Tmux for efficient
   multitasking.
-- **Neovim Setup**: my neovim distribution configurations.
+- **Helix**: a simple code editor.
 
 ## Requirements
 
@@ -76,6 +76,12 @@ files; to add new ones and/or change existing ones, go to the following files:
     └─ .zprofile # ENV variables should be defined here
 
 ```
+
+## Todo
+
+- change git setup via gh
+- change tmux by [zellij](https://github.com/zellij-org/zellij)
+- create a executable to know if is on darkmode
 
 ## Contributions
 

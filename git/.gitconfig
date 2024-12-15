@@ -3,9 +3,9 @@
   name = Jose Leiva
   email = email.joseleiva@gmail.com
 [core]
-  editor = nvim
+  editor = hx
   autocrlf = input
-  pager = bat
+  pager = less
 [init]
   defaultBranch = main
 [credential "https://github.com"]
