@@ -1,16 +1,16 @@
 # This is Git's per-user configuration file.
 [user]
-  name = Jose Leiva
-  email = email.joseleiva@gmail.com
+name = Jose Leiva
+email = email.joseleiva@gmail.com
 [core]
-  editor = hx
-  autocrlf = input
-  pager = less
+editor = hx
+autocrlf = input
+pager = less
 [init]
-  defaultBranch = main
+defaultBranch = main
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+helper =
+helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+helper =
+helper = !/usr/bin/gh auth git-credential
