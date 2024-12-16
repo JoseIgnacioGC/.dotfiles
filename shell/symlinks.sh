@@ -1,5 +1,8 @@
 #!/bin/bash
 ln -fsv "${DOTFILES}/git/.gitconfig" "${HOME}"
-ln -fsv "${DOTFILES}/zsh/{.zshrc,.zprofile,.zsh_logout}" "${HOME}"
+for file in .zshrc .zprofile .zsh_logout; do
+  ln -fsv "${DOTFILES}/.dotfiles/zsh/${file}" "${HOME}"
+done
 ln -fsv "${DOTFILES}/tmux/.tmux.conf" "${HOME}"
-ln -fsv "${DOTFILES}/helix/config.toml" "${HOME}/.config/helix"
+ln -fsv "${DOTFILES}/helix/config.toml" "${HOME}/.config/helix/"
+ln -fsv "${DOTFILES}/helix/themes" "${HOME}/.config/helix/"

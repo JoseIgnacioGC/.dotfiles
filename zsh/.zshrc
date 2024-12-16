@@ -19,7 +19,6 @@ plugins=(
     zsh-completions
 
     git
-    rust
     python
     pip
     npm-run
@@ -29,6 +28,7 @@ plugins=(
     volta
     web-search
 
+    # rust
     # zsh-vi-mode # wsl config - too slow
     # zsh-syntax-highlighting # wsl config - too slow
 )
@@ -47,7 +47,7 @@ bindkey -v
 setopt globdots
 
 # rust - cargo
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
 
 (( CALCULATE_STARTUP_TIME )) && zprof
 

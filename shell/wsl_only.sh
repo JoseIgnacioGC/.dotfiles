@@ -7,9 +7,8 @@ mv -vf xdg-open "${HOME}"/.local/bin/
 ln -fsv "${HOME}"/.local/bin/xdg-open "${HOME}"/.local/bin/open
 
 # windows hello PAM module for sudo
+# TODO: printf something
 wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz
 tar xvf release.tar.gz
-cd release || exit
-./install.sh
-cd .. || exit
+./release/install.sh
 rm -fr release.tar.gz release
