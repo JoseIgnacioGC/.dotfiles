@@ -101,7 +101,7 @@ tmux source "${HOME}"/.tmux.conf
 chsh -s "$(which tmux)"
 
 # run all `shell/` scripts
-for script in shell/*.sh; do
+for script in scripts/*.sh; do
 	[ -e "$script" ] || continue # skip non-existent files
 
 	if [ "${is_a_wsl_env}" == "${false}" ] && [ "$(basename "$script")" == "wsl_only.sh" ]; then
