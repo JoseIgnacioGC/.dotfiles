@@ -3,23 +3,19 @@
 Welcome to my dotfiles repository! This project was created to streamline the setup
 and management of my Debian-based Linux and WSL environment configurations.
 
-## About
+## 📄 | About
 
-To learn more about each configuration go to a folder and read its README file.
-The dotfiles in this repository are carefully curated to enhance the Linux user:
+This configuration make use of:
+1. [zsh](https://www.zsh.org/) shell & [oh-my-zsh](https://ohmyz.sh/) framework
+1. [Tmux](https://github.com/tmux/tmux/wiki) terminal multiplexer
+1. [Helix](https://helix-editor.com/) editor
 
-- **Customized Shell**: A well-configured shell environment with zsh and a set of
-  handpicked plugins and autocompletions.
-- **Tmux Configuration**: Productive terminal multiplexing with Tmux for efficient
-  multitasking.
-- **Helix**: a simple code editor.
+## 🎯 | Target
 
-## Requirements
+[Ubuntu](https://ubuntu.com/download/desktop) distro. The auto setup file `setup.sh` only works with ubuntu.
 
-This configuration is designed so that the only thing required for execution
-is to have [Git](https://git-scm.com/) installed and configured.
 
-## Setting up
+## ⚙️ | Setting up
 
 > [!WARNING]
 >
@@ -55,12 +51,7 @@ Follow these steps to set up the dotfiles on your system:
    folders, install packages, configure the packages, symlink the files
    and folders to your machine, and make sure your configurations are applied.
 
-## Your Customization
-
-Feel free to customize these dotfiles to suit your preferences. Whether it's
-tweaking the shell prompt, adding new aliases, or adjusting color schemes,
-make it your own. The power of dotfiles lies in their ability to reflect
-your unique workflow.
+## 🎀 | Customization
 
 ### Add Aliases & Env variables
 
@@ -76,19 +67,20 @@ files; to add new ones and/or change existing ones, go to the following files:
     └─ .zprofile # ENV variables should be defined here
 
 ```
+then reset the shell or source the files you change:
+```bash
+# e.g.
+source aliases.zsh
+```
 
-## Todo
+## 📃 | Todo
 
-- change git setup via gh
-- change tmux by [zellij](https://github.com/zellij-org/zellij)
-- create a executable to know if is on darkmode
-
+- [ ] create a executable to know if is on darkmode
 ## Contributions
 
 Contributions are welcome! If you have improvements, bug fixes, or new features
 to propose.
 
-Let's collaborate to make these dotfiles even better!
 
 ## License
 
