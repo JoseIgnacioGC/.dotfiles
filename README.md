@@ -5,17 +5,17 @@ and management of my Debian-based Linux and WSL environment configurations.
 
 ## 📄 | About
 
-This configuration make use of:
+This configuration uses:
 1. [zsh](https://www.zsh.org/) shell & [oh-my-zsh](https://ohmyz.sh/) framework
 1. [Tmux](https://github.com/tmux/tmux/wiki) terminal multiplexer
 1. [Helix](https://helix-editor.com/) editor
 
 ## 🎯 | Target
 
-[Ubuntu](https://ubuntu.com/download/desktop) distro. The auto setup file `setup.sh` only works with ubuntu.
+[Ubuntu](https://ubuntu.com/download/desktop) distro. The auto setup file `setup.sh` only works on Ubuntu.
 
 
-## ⚙️ | Setting up
+## ⚙️ | Setup
 
 > [!WARNING]
 >
@@ -47,16 +47,17 @@ Follow these steps to set up the dotfiles on your system:
    bash setup.sh
    ```
 
-   It is recommended to check this script, because the script will create
+   It is recommended to check this script, because it will create
    folders, install packages, configure the packages, symlink the files
    and folders to your machine, and make sure your configurations are applied.
 
 ## 🎀 | Customization
 
-### Add Aliases & Env variables
+### Adding aliases & env variables
 
-For performance reasons, aliases and Env variables are defined in different
-files; to add new ones and/or change existing ones, go to the following files:
+For performance reasons, aliases and env variables are defined
+in separated files; to add new ones and/or change existing ones,
+go to the following files:
 
 ```bash
 .
@@ -67,7 +68,7 @@ files; to add new ones and/or change existing ones, go to the following files:
     └─ .zprofile # ENV variables should be defined here
 
 ```
-then reset the shell or source the files you change:
+then reset the shell or source the files you changed:
 ```bash
 # e.g.
 source aliases.zsh
@@ -75,11 +76,11 @@ source aliases.zsh
 
 ## 📃 | Todo
 
-- [ ] create a executable to know if is on darkmode
+- [ ] create an executable to know if it's on darkmode
 ## Contributions
 
-Contributions are welcome! If you have improvements, bug fixes, or new features
-to propose.
+Contributions are welcome! If you have improvements, bugfixes, or new features
+to suggest.
 
 
 ## License
