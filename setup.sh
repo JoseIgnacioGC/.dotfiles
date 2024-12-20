@@ -39,7 +39,7 @@ mkdir -p "${HOME}"/bin "${HOME}"/.local/bin
 
 __print_highlight_x_task "ssh key setup" "started"
 
-ssh key - generate
+# ssh key - generate
 ssh-keygen -o -f "${HOME}"/.ssh/id_rsa
 
 __print_highlight_x_task "ssh key setup" "finished"
@@ -59,7 +59,7 @@ sudo apt -y install neovim
 sudo apt -y install python3
 # apt - symlink to prevent issues
 sudo apt -y install fd-find
-# ln -vs "$(which fdfind)" "${HOME}"/.local/bin/fd # NOTE: only Debian-based distros
+ln -vs "$(which fdfind)" "${HOME}"/.local/bin/fd # NOTE: only Debian-based distros
 # apt - insetall helix
 sudo add-apt-repository -y ppa:maveonair/helix-editor
 sudo apt -y update
@@ -85,10 +85,10 @@ sudo apt -y update
 sudo apt -y install gh
 # gh - login
 # Todo: check auth status
-# while ! gh auth login; do
-#	echo "GitHub authentication failed. Please try again."
-#	sleep 2
-# done
+while ! gh auth login; do
+      echo "GitHub authentication failed. Please try again."
+      sleep 2
+done
 __print_highlight_x_task "gh cli installation & setup" "finished"
 
 # git - setup sub-modules

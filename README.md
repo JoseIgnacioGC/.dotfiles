@@ -17,9 +17,6 @@ This configuration uses:
 
 ## ⚙️ | Setup
 
-> [!WARNING]
->
-> The setup file has not yet been tested.
 
 Follow these steps to set up the dotfiles on your system:
 
