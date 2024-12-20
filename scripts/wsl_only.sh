@@ -13,3 +13,5 @@ wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/relea
 tar xvf release.tar.gz
 ./release/install.sh
 rm -fr release.tar.gz release
+
+# TODO: set custom WIN_HOME (windows_home) path on .zprofile

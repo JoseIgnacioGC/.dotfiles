@@ -5,7 +5,6 @@
 # set -o pipefail
 
 # TODO:
-# - printf with color to show all sections in the setup (like the update function on aliases.zsh)
 # - the script should can be run multiple times
 # - helix, change color if is in dark mode
 
@@ -17,6 +16,12 @@ readonly true=0
 readonly false=1
 
 is_a_wsl_env=${false}
+
+# functions
+function __print_highlight_x_task() {
+	# $1: [task], $2: begun | finished | [other]
+	printf "\n%s \033[32m%s\033[0m\n\n" "$1" "has $2:"
+}
 
 # pre installation options
 printf "\nBefore the setup. Do you want to...\n\n"
@@ -32,11 +37,13 @@ mkdir -p "${HOME}"/{Documents,Downloads,Trash}
 mkdir -p "${HOME}"/Workspace/{projects,forks,lern,scripts}
 mkdir -p "${HOME}"/bin "${HOME}"/.local/bin
 
-# ssh key - generate
-printf "\nssh-keygen setup:\n\n"
-# ssh-keygen -o -f "${HOME}"/.ssh/id_rsa
+__print_highlight_x_task "ssh key setup" "started"
 
-printf "\nssh-keygen finished\n\n"
+ssh key - generate
+ssh-keygen -o -f "${HOME}"/.ssh/id_rsa
+
+__print_highlight_x_task "ssh key setup" "finished"
+__print_highlight_x_task "apt install" "started"
 
 # apt - install packages
 sudo apt -y update
@@ -61,16 +68,19 @@ sudo apt -y install helix
 sudo apt -y update
 sudo apt -y upgrade
 
+__print_highlight_x_task "apt install" "finished"
+
 # gh - install
-printf "\ngh cli installation:\n\n"
-(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
-	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
-        && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
-        && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
-	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
-	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-	&& sudo apt update \
-	&& sudo apt install gh -y
+__print_highlight_x_task "gh cli installation & setup" "started"
+
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) &&
+	sudo mkdir -p -m 755 /etc/apt/keyrings &&
+	out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg &&
+	cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null &&
+	sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg &&
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null &&
+	sudo apt update &&
+	sudo apt install gh -y
 sudo apt -y update
 sudo apt -y install gh
 # gh - login
@@ -79,20 +89,32 @@ sudo apt -y install gh
 #	echo "GitHub authentication failed. Please try again."
 #	sleep 2
 # done
+__print_highlight_x_task "gh cli installation & setup" "finished"
 
 # git - setup sub-modules
 git submodule init
 git submodule update
 
 # volta (nodejs version manager) - install & setup
+__print_highlight_x_task "volta (node package manager) install & setup" "started"
+
 curl https://get.volta.sh | sh
 volta install node # lts node & npm
 
+__print_highlight_x_task "volta (node package manager) install & setup" "finished"
+
 # oh-my-zsh - install
+__print_highlight_x_task "oh-my-zsh install & setup (press \"n\" to prevent this script from terminating)" "started"
+
 # ERROR: the script ends here
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+__print_highlight_x_task "oh-my-zsh install & setup" "finished"
+
 # Tmux - setup plugin manager
+__print_highlight_x_task "tmux setup" "started"
+
+ln -fsv "${DOTFILES}/tmux/.tmux.conf" "${HOME}"
 git clone https://github.com/tmux-plugins/tpm "${HOME}"/.tmux/plugins/tpm
 tmux start-server
 tmux source "${HOME}"/.tmux.conf
@@ -100,6 +122,9 @@ tmux source "${HOME}"/.tmux.conf
 # Tmux - as default terminal
 chsh -s "$(which tmux)"
 
+__print_highlight_x_task "tmux setup" "started"
+
+__print_highlight_x_task "the setup of custom settings" "started"
 # run all `shell/` scripts
 for script in scripts/*.sh; do
 	[ -e "$script" ] || continue # skip non-existent files
@@ -110,10 +135,13 @@ for script in scripts/*.sh; do
 
 	sh "$script"
 done
+__print_highlight_x_task "the setup of custom settings" "finished"
 
+__print_highlight_x_task "last update & upgrade" "started"
 
 sudo apt -y update
 sudo apt -y upgrade
 
-tmux new \; run 'printf "setup finished, enjoy!"'
+__print_highlight_x_task "last update & upgrade" "finished"
 
+tmux new \; run 'printf "setup finished, enjoy!"'
